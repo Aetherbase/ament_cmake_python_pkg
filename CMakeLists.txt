@@ -12,6 +12,12 @@ find_package(ament_cmake_python REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
+# Install launch files.
+install(DIRECTORY
+  scripts
+  DESTINATION share/${PROJECT_NAME}/
+)
+
 ament_python_install_package(${PROJECT_NAME})
 
 if(BUILD_TESTING)
